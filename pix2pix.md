@@ -27,17 +27,34 @@ important architectural choices.
 
 In previously Pix2Pix transformations, each output pixel is considered conditionally independent
 from all others given the input imagem, this kind of output space is called as "unstructured"
-There
+conditional GANs instead learn a structured loss. Previously conditional GANs are applied to
+sepcific areas, and our effort is for general perpose.
+Besides, our generator and discriminatior choices are also different from others.
+Generator : "U-Net_based architecture"
+discriminatior : convolutional "PatchGAN" classifier, which penalizes structure at the
+scare of  image patches.
 ### Method
+
+GANs are generative models that can learn a mapping from random noise to output image
+
+conditional GANs learn a mapping from image and random noise and produce image that can't be
+distinguished from images by an adversarially trained discriminatior
 
 1. objective
 
+
 2. Network architectures
+
+here are some key features discussed
+
+A. Generator with skips
+
+B. Markovian discriminatior (PatchGAN)
 
 3. Optimization and inference
 
 ### Experiments
-
+This part is about the generality of conditional GANs
 1. Evaluation metrics
 
 2. Analysis of the objective function
